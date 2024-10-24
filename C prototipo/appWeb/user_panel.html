@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Panel de Usuario - Empresa IoT</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="Logo Empresa IoT">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Mi Cuenta</a>
+                    <ul class="submenu">
+                        <li><a href="user_profile.html">Perfil</a></li>
+                        <li><a href="user_panel.html">Mis Dispositivos</a></li>
+                        <li><a href="user_projects.html">Proyectos Activos</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Mis Dispositivos</h2>
+            <div id="lista-dispositivos">
+                <!-- Lista dinámica de dispositivos se llenará con JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Empresa IoT - Todos los derechos reservados</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/user_panel.js"></script>
+</body>
+</html>

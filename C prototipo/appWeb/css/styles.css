@@ -1,0 +1,132 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #444; /* Gris Oscuro Suave */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Blanco */
+}
+
+header img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #555; /* Gris Medio */
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #666; /* Gris más Claro */
+}
+
+nav ul ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #777; /* Gris Claro */
+    min-width: 150px;
+    z-index: 1;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+}
+
+nav ul ul.submenu li a {
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333; /* Gris Oscuro */
+}
+
+footer {
+    background-color: #555; /* Gris Medio */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Botones */
+button {
+    background-color: #444; /* Gris Oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #666; /* Gris Claro */
+}
+
+/* Formularios */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff; /* Blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Gris Claro */
+    border-radius: 5px;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    header img {
+        max-height: 40px;
+    }
+}
