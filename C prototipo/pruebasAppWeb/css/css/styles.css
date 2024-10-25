@@ -1,0 +1,129 @@
+/* Configuración general */
+body {
+    background-color: #e0f7da; /* Fondo verde claro */
+    color: #333; /* Texto en gris oscuro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título */
+h1 {
+    color: #4a772f; /* Verde oscuro */
+    text-align: center;
+    font-size: 3.5rem; /* Tamaño ajustado */
+    margin-top: 20px;
+}
+
+/* Contenedores principales */
+.container, .data-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado */
+    padding: 20px;
+}
+
+/* Imagen central */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 30%; /* Imagen más grande */
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #b5853c; /* Ocre */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a6732d; /* Ocre más oscuro en hover */
+}
+
+/* Cuadros de información */
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para móviles, permitirá que los cuadros se reorganicen */
+}
+
+.info-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 250px; /* Cuadro más proporcionado */
+    text-align: center;
+}
+
+.info-box h2 {
+    font-size: 1.4rem;
+    color: #4a772f; /* Verde oscuro */
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Sección del proyecto */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #4a772f;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #4a772f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 90%; /* Aumentar imagen en móviles */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .info-box {
+        width: 90%;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="/css/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Usuario</h1>
+    </header>
+
+    <main class="container">
+        <section class="user-info">
+            <h2>Bienvenido, [Nombre del Usuario]</h2>
+            <p>Aquí puedes monitorear tus datos y personalizar tus alertas.</p>
+        </section>
+
+        <section class="data-container">
+            <div class="info-box">
+                <h2>PM2.5</h2>
+                <p id="pm25">25 µg/m³</p>
+            </div>
+            <div class="info-box">
+                <h2>CO2</h2>
+                <p id="co2">400 ppm</p>
+            </div>
+            <div class="info-box">
+                <h2>Temperatura</h2>
+                <p id="temperature">22°C</p>
+            </div>
+            <div class="info-box">
+                <h2>Humedad</h2>
+                <p id="humidity">45%</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>Configuración de Alertas</h2>
+            <form id="alert-settings">
+                <div class="form-group">
+                    <label for="pm25-threshold">Umbral PM2.5 (µg/m³):</label>
+                    <input type="number" id="pm25-threshold" name="pm25-threshold" value="50">
+                </div>
+                <div class="form-group">
+                    <label for="co2-threshold">Umbral CO2 (ppm):</label>
+                    <input type="number" id="co2-threshold" name="co2-threshold" value="500">
+                </div>
+                <button type="submit" class="btn">Guardar Configuración</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Plataforma IoT para Monitoreo de Calidad del Aire</p>
+    </footer>
+    <script src="/js/js/main.js"></script>
+</body>
+</html>
