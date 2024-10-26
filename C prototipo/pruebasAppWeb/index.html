@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoreo de Calidad de Aire - IoT</title>
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="/css/css/styles.css">
+    <link rel="stylesheet" href="css/css/styles.css">
 </head>
 <body>
     <header>
         <h1>Monitoreo de Calidad de Aire - IoT</h1>
-        
         <nav class="button-container">
             <a href="login.html" class="btn">Iniciar Sesión</a>
             <a href="user_panel.html" class="btn">Panel de Usuario</a>
@@ -23,37 +20,51 @@
     <main class="container">
         <section class="intro">
             <p>Monitoreo en tiempo real de la calidad del aire</p>
-            <p>Controla y supervisa los niveles de contaminantes, temperatura, y humedad en tu área de operación con nuestra plataforma IoT.</p>
+            <p>Controla y supervisa los niveles de contaminantes, temperatura y humedad en tu área con nuestra plataforma IoT.</p>
         </section>
 
+        <!-- Caja de datos mejorada con animación de carga -->
         <section class="data-container">
             <div class="info-box">
                 <h2>PM2.5</h2>
-                <p>25 µg/m³</p>
+                <p class="loading" id="pm25">Cargando...</p>
             </div>
             <div class="info-box">
                 <h2>CO2</h2>
-                <p>400 ppm</p>
+                <p class="loading" id="co2">Cargando...</p>
             </div>
             <div class="info-box">
                 <h2>Temperatura</h2>
-                <p>22°C</p>
+                <p class="loading" id="temperature">Cargando...</p>
             </div>
             <div class="info-box">
                 <h2>Humedad</h2>
-                <p>45%</p>
+                <p class="loading" id="humidity">Cargando...</p>
             </div>
         </section>
 
         <section class="content">
             <h2>Sobre el Proyecto</h2>
-            <p>Este proyecto tiene como objetivo ofrecer una plataforma IoT para monitorear la calidad del aire en entornos urbanos e industriales, ofreciendo datos en tiempo real y alertas personalizadas.</p>
+            <p>Este proyecto ofrece una plataforma IoT para monitorear la calidad del aire en tiempo real con alertas personalizadas.</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Plataforma IoT para Monitoreo de Calidad del Aire | <a href="#">Sobre Nosotros</a> | <a href="#">Contacto</a></p>
+        <div class="footer-container">
+            <p>© 2024 Plataforma IoT para Monitoreo de Calidad del Aire</p>
+            <nav class="footer-links">
+                <a href="nosotrosAbout.html" class="btn">Sobre Nosotros</a>
+                <a href="#">Contacto</a>
+                <a href="#">Soporte</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/ISPC-TST-PI-I-2024/capa-de-presentacion-grupo-Plata.git" target="_blank">
+                    <img src="assets/github.svg" alt="GitHub">
+                </a>
+                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
     </footer>
-    <script src="/js/js/main.js"></script>   
+    <script src="js/js/main.js"></script>
 </body>
 </html>
