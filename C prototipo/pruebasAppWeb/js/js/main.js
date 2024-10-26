@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Simulación de datos para los indicadores de calidad de aire (User Panel)
+    cargarDatosSimulados();
+    configurarAlertas();
+    agregarEventosEquipo();
+});
+
+function cargarDatosSimulados() {
     const data = {
         pm25: "22 µg/m³",
         co2: "410 ppm",
@@ -7,31 +12,28 @@ document.addEventListener("DOMContentLoaded", function() {
         humidity: "48%"
     };
 
-    if (document.getElementById("pm25")) {
-        document.getElementById("pm25").innerText = data.pm25;
-        document.getElementById("co2").innerText = data.co2;
-        document.getElementById("temperature").innerText = data.temperature;
-        document.getElementById("humidity").innerText = data.humidity;
+    const pm25Element = document.getElementById("pm25");
+    const co2Element = document.getElementById("co2");
+    const tempElement = document.getElementById("temperature");
+    const humElement = document.getElementById("humidity");
+
+    if (pm25Element && co2Element && tempElement && humElement) {
+        setTimeout(() => {
+            pm25Element.innerText = data.pm25;
+            co2Element.innerText = data.co2;
+            tempElement.innerText = data.temperature;
+            humElement.innerText = data.humidity;
+
+            // Remover la clase de carga
+            pm25Element.classList.remove("loading");
+            co2Element.classList.remove("loading");
+            tempElement.classList.remove("loading");
+            humElement.classList.remove("loading");
+        }, 1000); // Tiempo de "carga" simulado
     }
+}
 
-    // Validación del formulario de inicio de sesión (Login)
-    const loginForm = document.querySelector('form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(event) {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            if (!email.includes('@')) {
-                alert('Por favor ingrese un correo válido.');
-                event.preventDefault();
-            } else if (password.length < 6) {
-                alert('La contraseña debe tener al menos 6 caracteres.');
-                event.preventDefault();
-            }
-        });
-    }
-
-    // Configuración de Alertas (User Panel)
+function configurarAlertas() {
     const alertForm = document.getElementById("alert-settings");
     if (alertForm) {
         alertForm.addEventListener("submit", function(event) {
@@ -40,36 +42,28 @@ document.addEventListener("DOMContentLoaded", function() {
             const pm25Threshold = document.getElementById("pm25-threshold").value;
             const co2Threshold = document.getElementById("co2-threshold").value;
 
+            // Guardar los umbrales en localStorage
             localStorage.setItem("pm25Threshold", pm25Threshold);
             localStorage.setItem("co2Threshold", co2Threshold);
 
-            alert(`Configuración guardada:\nPM2.5: ${pm25Threshold} µg/m³\nCO2: ${co2Threshold} ppm`);
-        });
+            // Feedback visual en el botón de guardar
+            const submitButton = alertForm.querySelector('button[type="submit"]');
+            submitButton.innerText = "¡Guardado!";
+            submitButton.style.backgroundColor = "#4a772f";
 
-        const savedPm25Threshold = localStorage.getItem("pm25Threshold");
-        const savedCo2Threshold = localStorage.getItem("co2Threshold");
-
-        if (savedPm25Threshold) {
-            document.getElementById("pm25-threshold").value = savedPm25Threshold;
-        }
-        if (savedCo2Threshold) {
-            document.getElementById("co2-threshold").value = savedCo2Threshold;
-        }
-    }
-
-    // Funciones de administración (Admin Panel)
-    const addUserButton = document.querySelector(".admin-options .btn:nth-child(1)");
-    const deleteUserButton = document.querySelector(".admin-options .btn:nth-child(2)");
-
-    if (addUserButton) {
-        addUserButton.addEventListener("click", function() {
-            alert("Función agregar usuario en construcción");
+            setTimeout(() => {
+                submitButton.innerText = "Guardar Configuración";
+                submitButton.style.backgroundColor = "#b5853c";
+            }, 2000);
         });
     }
+}
 
-    if (deleteUserButton) {
-        deleteUserButton.addEventListener("click", function() {
-            alert("Función eliminar usuario en construcción");
+function agregarEventosEquipo() {
+    const teamMembers = document.querySelectorAll(".team-member");
+    teamMembers.forEach(member => {
+        member.addEventListener("click", () => {
+            alert(`Información de ${member.querySelector("h3").innerText}`);
         });
-    }
-});
+    });
+}
