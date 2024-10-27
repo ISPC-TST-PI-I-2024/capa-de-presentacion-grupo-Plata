@@ -1,9 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
+    configurarLogin();  // Nuevo: Configurar el proceso de login
     cargarDatosSimulados();
     configurarAlertas();
     agregarEventosEquipo();
 });
 
+// Simulación de login
+function configurarLogin() {
+    const loginForm = document.getElementById('loginForm');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            // Credenciales simuladas
+            const validEmail = 'usuario@ejemplo.com';
+            const validPassword = '123456';
+
+            // Obtener los valores ingresados por el usuario
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Verificar las credenciales
+            if (email === validEmail && password === validPassword) {
+                // Redirigir a perfilUser.html si las credenciales son correctas
+                window.location.href = 'perfilUser.html';
+            } else {
+                // Mostrar mensaje de error si las credenciales son incorrectas
+                const errorMessage = document.getElementById('error-message');
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                }
+            }
+        });
+    }
+}
+
+// Cargar datos simulados para los sensores
 function cargarDatosSimulados() {
     const data = {
         pm25: "22 µg/m³",
@@ -33,6 +66,7 @@ function cargarDatosSimulados() {
     }
 }
 
+// Configurar alertas y umbrales de calidad del aire
 function configurarAlertas() {
     const alertForm = document.getElementById("alert-settings");
     if (alertForm) {
@@ -59,6 +93,7 @@ function configurarAlertas() {
     }
 }
 
+// Agregar eventos de clic a los miembros del equipo
 function agregarEventosEquipo() {
     const teamMembers = document.querySelectorAll(".team-member");
     teamMembers.forEach(member => {
