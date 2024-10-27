@@ -36,4 +36,3 @@ Estamos avanzando en la **primera fase** del proyecto, enfocándonos en la estru
 ---
 
 ¡Seguimos mejorando el proyecto y cualquier aportación o idea es bienvenida!
-
