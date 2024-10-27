@@ -7,68 +7,87 @@
     <link rel="stylesheet" href="css/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Panel de Usuario</h1>
+
+    <!-- Header con Barra de Navegación -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Panel de Usuario</h1>
+            <nav class="nav-links">
+                <a href="index.html" class="btn">Inicio</a>
+                <a href="nosotrosAbout.html" class="btn">Sobre Nosotros</a>
+                <a href="user_panel.html" class="btn">Perfil</a>
+                <a href="admin_panel.html" class="btn">Administración</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main class="container">
         <section class="user-info">
-            <h2>Bienvenido, Carlos Santiago Moschen (personsa inventada)</h2>
+            <h2>Bienvenido "nombre de la persona!" </h2>
             <p>Aquí puedes monitorear tus datos y personalizar tus alertas.</p>
         </section>
 
+        <!-- Tarjetas de Datos Ambientales -->
         <section class="data-container">
             <div class="info-box">
+                <img src="/assets/airqlty.png" alt="PM2.5" class="info-icon">
                 <h2>PM2.5</h2>
                 <p id="pm25">25 µg/m³</p>
             </div>
             <div class="info-box">
+                <img src="/assets/co2.png" alt="CO2" class="info-icon">
                 <h2>CO2</h2>
                 <p id="co2">400 ppm</p>
             </div>
             <div class="info-box">
+                <img src="/assets/high-temperature.png" alt="Temperatura" class="info-icon">
                 <h2>Temperatura</h2>
                 <p id="temperature">22°C</p>
             </div>
             <div class="info-box">
+                <img src="/assets/humidity.png" alt="Humedad" class="info-icon">
                 <h2>Humedad</h2>
                 <p id="humidity">45%</p>
             </div>
         </section>
 
+        <!-- Formulario de Configuración de Alertas -->
         <section class="content">
             <h2>Configuración de Alertas</h2>
-            <form id="alert-settings">
+            <form id="alert-settings" class="alert-form">
                 <div class="form-group">
                     <label for="pm25-threshold">Umbral PM2.5 (µg/m³):</label>
-                    <input type="number" id="pm25-threshold" name="pm25-threshold" value="50">
+                    <input type="number" id="pm25-threshold" name="pm25-threshold" value="50" min="0">
                 </div>
                 <div class="form-group">
                     <label for="co2-threshold">Umbral CO2 (ppm):</label>
-                    <input type="number" id="co2-threshold" name="co2-threshold" value="500">
+                    <input type="number" id="co2-threshold" name="co2-threshold" value="500" min="0">
                 </div>
-                <button type="submit" class="btn">Guardar Configuración</button>
+                <button type="submit" class="btn-save">Guardar Configuración</button>
             </form>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <p>© 2024 Plataforma IoT para Monitoreo de Calidad del Aire</p>
             <nav class="footer-links">
                 <a href="nosotrosAbout.html" class="btn">Sobre Nosotros</a>
-                <a href="#">Contacto</a>
-                <a href="#">Soporte</a>
             </nav>
             <div class="social-icons">
                 <a href="https://github.com/ISPC-TST-PI-I-2024/capa-de-presentacion-grupo-Plata.git" target="_blank">
                     <img src="assets/github.svg" alt="GitHub">
                 </a>
-                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.ispc.edu.ar/" target="_blank">
+                    <img src="assets/ispc.png" alt="GitHub">
+                </a>
             </div>
         </div>
     </footer>
-    
+
     <script src="js/js/main.js"></script>
 </body>
 </html>
+
