@@ -223,6 +223,8 @@ El proyecto se organiza en las siguientes carpetas:
 tiempo real y envío de comandos.
 - Panel de administración: Actualización de firmware y revisión de logs del sistema.
 
+  [VIDEO PRESENTACIÓN]("https://youtu.be/5FNkGmT-RB4?feature=shared")
+  
 ### Próximos Pasos
 * Ampliar las funcionalidades del panel de administración, integrando herramientas de análisis de logs.
 * Mejorar el dashboard de usuario con visualizaciones más avanzadas y opciones de configuración personalizadas.
