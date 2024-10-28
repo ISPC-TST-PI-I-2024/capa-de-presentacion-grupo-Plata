@@ -166,7 +166,8 @@ El proyecto se organiza en las siguientes carpetas:
 /capa_de_presentacion  
   ├── A_requisitos/  
   ├── B_investigacion/  
-  ├── C_prototipo/  
+  ├── C_prototipo/
+                ├── AppWeb - Grupo Plata/ 
   ├── D_presentacion/  
   └── README.md  
 ```
