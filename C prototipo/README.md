@@ -1,33 +1,43 @@
-## Breve Descripción
-Un sistema escalable de IoT diseñado para monitorear y analizar variables ambientales, asegurando la calidad del aire y la seguridad en espacios interiores.
+# Plataforma IoT para Monitoreo de Calidad del Aire
 
-## Imagen de Presentación
-*(Coloca aquí un gráfico o diagrama del sistema IoT en acción. Puedes usar herramientas como Draw.io o Figma para crear uno)*
+## Descripción
 
-## Componentes Clave
-- **ESP32 Microcontroller**  
-- **Sensores: MQ135, DHT22**  
-- **Base de Datos: MySQL**  
-- **Procesamiento: Python**
+La **Plataforma IoT para Monitoreo de Calidad del Aire** es una aplicación web diseñada para monitorear y visualizar datos sobre la calidad del aire. A través de esta plataforma, los usuarios pueden obtener información en tiempo real sobre la calidad del aire, gestionar sus perfiles y administrar los dispositivos conectados.
 
-## Arquitectura del Sistema
-*(Añade aquí un diagrama de arquitectura de red o la interacción entre sensores, actuadores, bases de datos y procesamiento de datos)*
+## Estructura del Proyecto
 
-## Casos de Uso
-1. **Monitoreo de calidad del aire en hogares.**
-2. **Prevención de accidentes por fugas de gases peligrosos.**
+```bash
+├── /assets/              # Archivos multimedia como imágenes y logotipos
+├── /css/                 # Archivos de estilos (CSS)
+├── /docs/                # Documentación del proyecto
+├── /js/                  # Archivos de JavaScript
+├── /admin_panel.html     # Página del panel de administración
+├── /index.html           # Página principal de la plataforma
+├── /login.html           # Página de inicio de sesión
+├── /nosotrosAbout.html   # Página sobre el equipo
+├── /perfilUser.html      # Página de perfil de usuario
+├── /user_panel.html      # Página del panel del usuario
+└── README.md             # Archivo README con la documentación del proyecto
 
-## Instalación y Configuración
-*(Enlaza a una sección detallada sobre cómo instalar y configurar tu proyecto)*
+```
 
-## Video Demostrativo
-*(Coloca un enlace o un GIF mostrando cómo funciona tu sistema)*
+### Descripción de las Páginas HTML  
 
-## Colaboradores
-- **GRUPO PLATA**
+**admin_panel.html:** Página del panel de administración donde los administradores pueden gestionar usuarios, dispositivos y configuraciones del sistema.  
 
-## Licencia
-*(Especifica el tipo de licencia que utilizas)*
+**index.html:** Página principal de la plataforma, que sirve como el punto de entrada para los usuarios.  
 
-## Contacto
-Para más información, contacta a: *[Tu correo o cuenta de GitHub]*
+**login.html:** Página de inicio de sesión para los usuarios registrados.  
+
+**nosotrosAbout.html:** Página que proporciona información sobre el equipo de desarrollo y la misión del proyecto.  
+
+**perfilUser.html:** Página donde los usuarios pueden visualizar y modificar sus perfiles personales, como nombre, correo y configuraciones.  
+
+**user_panel.html:** Panel donde los usuarios pueden ver los datos recolectados por sus dispositivos conectados y realizar acciones como generar reportes o configurar alertas.  
+
+### Tecnologías Utilizadas
+Frontend: HTML5, CSS3, JavaScript.
+Backend: Python con Flask (API RESTful).
+Base de Datos: MySQL.
+Microcontroladores IoT: ESP32 con sensores (MQ135, AHT25, BMP280, etc).
+Servidor: Ubuntu con Apache, integrando servicios y APIs para la recolección y análisis de datos.
