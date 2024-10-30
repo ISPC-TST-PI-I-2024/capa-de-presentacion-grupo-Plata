@@ -436,43 +436,82 @@ body {
 
 
 /* -------------------------------------------------Footer */
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1; /* Ocupa todo el espacio restante para empujar el footer hacia abajo */
+}
+
+footer {
+    background-color: #4a772f;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+}
+
+/* Estilos específicos del footer */
 .footer-container {
     background-color: #4a772f;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     font-size: 0.9rem;
-    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-.footer-links a {
-    color: #b8e994;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #e0f7da;
-}
-
+.footer-links,
 .social-icons {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    justify-content: center;
 }
 
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Cambia la disposición para pantallas grandes */
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    .footer-links,
+    .social-icons {
+        justify-content: flex-start; /* Alineación a la izquierda en pantallas grandes */
+    }
+}
+
+/* Estilos para animación de íconos en hover */
 .social-icons a img {
     width: 24px;
     height: 24px;
     filter: brightness(0) invert(1);
-    transition: transform 0.3s;
+    transition: transform 0.2s ease-in-out, filter 0.2s;
 }
 
 .social-icons a:hover img {
     transform: scale(1.2);
+    filter: brightness(1); /* Efecto al hacer hover */
 }
 
+/* Hover para enlaces del footer */
+.footer-links a:hover {
+    color: #a3c586; /* Verde más oscuro para contraste */
+}
 
 /* ----------------------  Formulario de Configuración de Alertas */
 .alert-form .form-group {
