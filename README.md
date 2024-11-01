@@ -1,3 +1,5 @@
+![imagen capa de presentacion](https://github.com/user-attachments/assets/4b712aeb-36fe-48b1-915e-bab890868a89)
+
 ## Instituto: ISPC  
 **Carrera:** Tecnicatura Superior en Telecomunicaciones.  
 **Materia:** Proyecto Integrador I  
