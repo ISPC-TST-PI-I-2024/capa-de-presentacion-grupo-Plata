@@ -12,7 +12,6 @@
     <header class="main-header">
         <div class="header-content">
             <h1>Panel de Usuario</h1>
-            
             <nav class="nav-links">
                 <a href="perfilUser.html" class="btn">Perfil</a>
                 <a href="index.html" class="btn">Inicio</a>
@@ -23,7 +22,7 @@
     <!-- Contenido Principal -->
     <main class="container">
         <section class="user-info">
-            <h2>Bienvenido "nombre de la persona!"</h2>
+            <h2>Bienvenido, <span id="user-name">nombre del usuario</span>!</h2>
             <p>Aquí puedes monitorear tus datos y personalizar tus alertas.</p>
         </section>
 
@@ -32,7 +31,7 @@
             <div class="info-box">
                 <img src="/assets/airqlty.png" alt="MQ135 - Calidad del Aire" class="info-icon">
                 <h2>Calidad del Aire (MQ135)</h2>
-                <p id="mq135">Concentración de gases: 250 ppm</p>
+                <p id="aqi">Concentración de gases: 250 ppm</p>
             </div>
             <div class="info-box">
                 <img src="/assets/uv.png" alt="UV" class="info-icon">
@@ -104,6 +103,8 @@
         </div>
     </footer>
 
-    <script src="js/js/main.js"></script>
+    <!-- Scripts Externos -->
+    <script src="js/js/sensorController.js"></script>
+    <script src="js/js/alertController.js"></script>
 </body>
 </html>

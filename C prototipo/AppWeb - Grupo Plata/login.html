@@ -29,7 +29,7 @@
                     <input type="password" id="password" name="password" required placeholder="••••••••">
                 </div>
                 <button type="submit" class="btn-login">Ingresar</button>
-                <p id="error-message" style="color:red; display:none;">Credenciales incorrectas, intente de nuevo.</p>
+                <p id="error-message" style="color:red; display:none;"></p>
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
             </form>
         </div>
@@ -52,7 +52,20 @@
         </div>
     </footer>
 
-    <script src="js/js/main.js"></script>
+    <!-- Scripts de autenticación -->
+    <script src="js/js/auth.js"></script>
+    <script>
+        // Asignamos el evento de envío al formulario
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
+            // Llamar a la función login del archivo auth.js
+            const { login } = await import('./auth.js');
+            login(email, password);
+        });
+    </script>
 </body>
 </html>
