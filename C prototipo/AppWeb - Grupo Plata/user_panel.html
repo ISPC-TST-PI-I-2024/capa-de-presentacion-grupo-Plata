@@ -31,57 +31,33 @@
             <div class="info-box">
                 <img src="/assets/airqlty.png" alt="MQ135 - Calidad del Aire" class="info-icon">
                 <h2>Calidad del Aire (MQ135)</h2>
-                <p id="aqi">Concentración de gases: 250 ppm</p>
+                <p id="aqi">Cargando...</p>
             </div>
             <div class="info-box">
                 <img src="/assets/uv.png" alt="UV" class="info-icon">
                 <h2>Nivel UV (ML8511)</h2>
-                <p id="uv">2.5 mW/cm²</p>
+                <p id="uv">Cargando...</p>
             </div>
             <div class="info-box">
                 <img src="/assets/light.png" alt="Luz" class="info-icon">
                 <h2>Intensidad Lumínica (BH1750)</h2>
-                <p id="light">350 lux</p>
+                <p id="light">Cargando...</p>
             </div>
             <div class="info-box">
                 <img src="/assets/pressure.png" alt="Presión" class="info-icon">
                 <h2>Presión Atmosférica (BMP280)</h2>
-                <p id="pressure">1013 hPa</p>
+                <p id="pressure">Cargando...</p>
             </div>
             <div class="info-box">
                 <img src="/assets/high-temperature.png" alt="Temperatura" class="info-icon">
                 <h2>Temperatura (AM2320)</h2>
-                <p id="temperature">22°C</p>
+                <p id="temperature">Cargando...</p>
             </div>
             <div class="info-box">
                 <img src="/assets/humidity.png" alt="Humedad" class="info-icon">
                 <h2>Humedad (AM2320)</h2>
-                <p id="humidity">45%</p>
+                <p id="humidity">Cargando...</p>
             </div>
-        </section>
-
-        <!-- Formulario de Configuración de Alertas -->
-        <section class="content">
-            <h2>Configuración de Alertas</h2>
-            <form id="alert-settings" class="alert-form">
-                <div class="form-group">
-                    <label for="mq135-threshold">Umbral Calidad del Aire (ppm):</label>
-                    <input type="number" id="mq135-threshold" name="mq135-threshold" value="300" min="0">
-                </div>
-                <div class="form-group">
-                    <label for="uv-threshold">Umbral Nivel UV (mW/cm²):</label>
-                    <input type="number" id="uv-threshold" name="uv-threshold" value="3" min="0">
-                </div>
-                <div class="form-group">
-                    <label for="light-threshold">Umbral Intensidad Lumínica (lux):</label>
-                    <input type="number" id="light-threshold" name="light-threshold" value="500" min="0">
-                </div>
-                <div class="form-group">
-                    <label for="pressure-threshold">Umbral Presión Atmosférica (hPa):</label>
-                    <input type="number" id="pressure-threshold" name="pressure-threshold" value="1020" min="0">
-                </div>
-                <button type="submit" class="btn-save">Guardar Configuración</button>
-            </form>
         </section>
     </main>
 
@@ -105,6 +81,5 @@
 
     <!-- Scripts Externos -->
     <script src="js/js/sensorController.js"></script>
-    <script src="js/js/alertController.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const apiKey = 'plata';
-const apiUrl = 'http://api.gonaiot.com/plata';
+const apiUrl = '192.168.0.67:5000';
 
 async function fetchData(endpoint, options = {}) {
     const response = await fetch(`${apiUrl}${endpoint}`, {
